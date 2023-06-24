@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F","\u002Fmusicthread\u002F2021-favorites","\u002Fmusicthread\u002F2022-favorites","\u002Fmusicthread\u002Fheavy-rotation","\u002Fposts\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
