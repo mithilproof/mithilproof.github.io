@@ -1,13 +1,15 @@
 import "@/styles/fonts.css"
 import "@/styles/styles.css"
 
-import { Analytics } from "@vercel/analytics/react"
-
-export default function App({ Component, pageProps }) {
+import { Analytics } from '@vercel/analytics/react';
+ 
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
       <Analytics />
     </>
-  )
+  );
 }
+ 
+export default MyApp;

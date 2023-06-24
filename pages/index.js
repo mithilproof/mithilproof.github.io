@@ -22,7 +22,7 @@ const IndexPage = ({ posts }) => {
         <div className="grid max-w-full gap-16 auto-rows-auto">
           <div>
             <p className="mt-8 md:mt-4">
-              I'm the co-founder and CEO of {" "}
+              I'm the founder and CEO of {" "}
               <a
                 className="text-tertiary dark:text-darkTertiary"
                 href="https://oleic.co"
@@ -155,7 +155,7 @@ const IndexPage = ({ posts }) => {
               />
             </div>
           </Section> */}
-         {/*  <Section title="Writing">
+          <Section title="Writing">
             {orderedPosts.map((post, key) => {
               return (
                 <div className="mb-2">
@@ -168,7 +168,7 @@ const IndexPage = ({ posts }) => {
                 </div>
               )
             })}
-          </Section> */}
+          </Section>
 
           {/* <Section title="Projects">
             <div className="mb-4">
