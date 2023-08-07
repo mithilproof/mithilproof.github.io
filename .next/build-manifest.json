@@ -1,0 +1,90 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-78c92fac7aa8fdd8.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/UsB4kd93JH2R3DhPEGD3R/_buildManifest.js",
+    "static/UsB4kd93JH2R3DhPEGD3R/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/996-d63ad7fae077247e.js",
+      "static/chunks/pages/index-3a3e56f787f51331.js"
+    ],
+    "/404": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/996-d63ad7fae077247e.js",
+      "static/chunks/pages/404-17ad96ed3c73e7c7.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/css/bb53447de8678b48.css",
+      "static/chunks/pages/_app-0381a5dac9f96517.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/pages/_error-54de1933a164a1ff.js"
+    ],
+    "/colophon": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/996-d63ad7fae077247e.js",
+      "static/chunks/pages/colophon-2054e70ba665c790.js"
+    ],
+    "/musicthread/2021-favorites": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/996-d63ad7fae077247e.js",
+      "static/chunks/755-e13aabd2214fd84d.js",
+      "static/chunks/986-df2a661e3d3e6aed.js",
+      "static/chunks/pages/musicthread/2021-favorites-9f1a2febb637b294.js"
+    ],
+    "/musicthread/2022-favorites": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/996-d63ad7fae077247e.js",
+      "static/chunks/755-e13aabd2214fd84d.js",
+      "static/chunks/986-df2a661e3d3e6aed.js",
+      "static/chunks/pages/musicthread/2022-favorites-4f7a25030acd77ff.js"
+    ],
+    "/musicthread/heavy-rotation": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/996-d63ad7fae077247e.js",
+      "static/chunks/755-e13aabd2214fd84d.js",
+      "static/chunks/986-df2a661e3d3e6aed.js",
+      "static/chunks/pages/musicthread/heavy-rotation-70171dafec53fb20.js"
+    ],
+    "/posts/[slug]": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/996-d63ad7fae077247e.js",
+      "static/chunks/755-e13aabd2214fd84d.js",
+      "static/chunks/pages/posts/[slug]-00f5625d06ef511d.js"
+    ],
+    "/sentry-example-page": [
+      "static/chunks/webpack-94547de1949c56d7.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-31c4c56b77f34aeb.js",
+      "static/chunks/pages/sentry-example-page-1987329eb4e9f7d8.js"
+    ]
+  },
+  "ampFirstPages": []
+}

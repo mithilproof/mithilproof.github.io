@@ -1,0 +1,429 @@
+"use strict";
+exports.id = 869;
+exports.ids = [869];
+exports.modules = {
+
+/***/ 6041:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  Z: () => (/* binding */ layout)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(5893);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__(1853);
+// EXTERNAL MODULE: ./components/svg.js
+var svg = __webpack_require__(3386);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(6689);
+;// CONCATENATED MODULE: ./components/canvas.js
+// most code from https://codepen.io/tmrDevelops/pen/vOPZBv and https://medium.com/@pdx.lucasm/canvas-with-react-js-32e133c05258
+
+
+const Canvas = (props)=>{
+    const canvasRef = (0,external_react_.useRef)(null);
+    const draw = (context, x, y, r, g, b)=>{
+        context.fillStyle = `rgb(${r}, ${g}, ${b})`;
+        context.fillRect(x, y, 32, 32);
+    };
+    (0,external_react_.useEffect)(()=>{
+        const canvas = canvasRef.current;
+        const context = canvas.getContext("2d");
+        let x = 0;
+        let y = 0;
+        let time = 0;
+        let animationFrameId = null;
+        const R = function(x, y, time) {
+            return Math.floor(99 + 64 * Math.cos((x * x + y * y) / 300 + time));
+        };
+        const G = function(x, y, time) {
+            return Math.floor(50 + 64 * Math.cos((x * x - y * y) / 200 + time));
+        };
+        const B = function(x, y, time) {
+            return Math.floor(255 + 64 * Math.cos((x * x + y * y) / 300 + time));
+        };
+        const render = ()=>{
+            for(x = 0; x <= 30; x++){
+                for(y = 0; y <= 30; y++){
+                    draw(context, x, y, R(x, y, time), G(x, y, time), B(x, y, time));
+                }
+            }
+            time = time + 0.02;
+            animationFrameId = window.requestAnimationFrame(render);
+        };
+        render();
+        return ()=>{
+            window.cancelAnimationFrame(animationFrameId);
+        };
+    }, [
+        draw
+    ]);
+    return /*#__PURE__*/ jsx_runtime.jsx("canvas", {
+        width: "32",
+        height: "32",
+        ref: canvasRef,
+        ...props
+    });
+};
+/* harmony default export */ const canvas = (Canvas);
+
+;// CONCATENATED MODULE: ./components/header.js
+
+
+
+
+
+const Header = ()=>{
+    const router = (0,router_.useRouter)();
+    let justLogo = false;
+    if (router.pathname !== "/") {
+        justLogo = true;
+    }
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: "flex flex-col items-start",
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: "grid items-center mb-4 grid-cols-auto grid-rows-auto justify-items-center ",
+                children: [
+                    /*#__PURE__*/ jsx_runtime.jsx("div", {
+                        className: "col-1 row-1",
+                        children: /*#__PURE__*/ jsx_runtime.jsx(canvas, {})
+                    }),
+                    /*#__PURE__*/ jsx_runtime.jsx("div", {
+                        className: "z-10 col-1 row-1",
+                        children: /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
+                            href: "/",
+                            passhref: true,
+                            className: "mb-4 ",
+                            children: /*#__PURE__*/ jsx_runtime.jsx(svg/* LogoInverted */.SO, {})
+                        })
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: justLogo ? "hidden" : "",
+                children: [
+                    /*#__PURE__*/ jsx_runtime.jsx("h1", {
+                        className: "text-base",
+                        children: "Mithil Verma"
+                    }),
+                    /*#__PURE__*/ jsx_runtime.jsx("h2", {
+                        className: "text-tertiary dark:text-darkTertiary",
+                        children: "Notes on design, code, business, and life."
+                    })
+                ]
+            })
+        ]
+    });
+};
+/* harmony default export */ const header = (Header);
+
+;// CONCATENATED MODULE: ./components/layout.js
+
+
+
+const Layout = ({ children  })=>{
+    return /*#__PURE__*/ jsx_runtime.jsx("main", {
+        children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+            className: "mx-auto mt-16 max-w-container-small md:max-w-container-large md:mt-32",
+            children: [
+                /*#__PURE__*/ jsx_runtime.jsx(header, {}),
+                children,
+                /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                    className: "flex flex-row justify-between my-8",
+                    children: [
+                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("p", {
+                            className: "text-sm text-tertiary dark:text-darkTertiary",
+                            children: [
+                                "\xa9 ",
+                                new Date().getFullYear(),
+                                " Mithil Verma"
+                            ]
+                        }),
+                        /*#__PURE__*/ jsx_runtime.jsx("div", {
+                            className: "flex flex-row",
+                            children: /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
+                                href: "/colophon",
+                                passhref: true,
+                                className: "text-sm text-tertiary dark:text-darkTertiary",
+                                children: "Colophon"
+                            })
+                        })
+                    ]
+                })
+            ]
+        })
+    });
+};
+/* harmony default export */ const layout = (Layout);
+
+
+/***/ }),
+
+/***/ 3593:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (/* binding */ SEO)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function SEO({ title ="Mithil Verma" , og ="og.png" , description ="Mithil Verma is a software engineer and designer who creates human-centered design solutions."  }) {
+    const siteTitle = "Mithil Verma";
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
+                children: `${title}`
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                name: "description",
+                content: description
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:type",
+                content: "website"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:title",
+                content: title
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:description",
+                content: description
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:site_name",
+                content: "Mithil Verma"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:image",
+                content: `../images/meta1/${og}`
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:image:width",
+                content: "1200"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:image:height",
+                content: "630"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "twitter:image",
+                content: `../images/meta/${og}`
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "twitter:card",
+                content: "summary_large_image"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "twitter:creator",
+                content: "mithilproof"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "twitter:title",
+                content: title
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "twitter:description",
+                content: description
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                href: "../images/meta/apple-touch-icon-180x180.png",
+                rel: "apple-touch-icon",
+                sizes: "180x180"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                href: "../images/meta/apple-touch-icon-152x152.png",
+                rel: "apple-touch-icon",
+                sizes: "152x152"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                href: "../images/meta/apple-touch-icon-120x120.png",
+                rel: "apple-touch-icon",
+                sizes: "120x120"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                href: "../images/meta/apple-touch-icon-76x76.png",
+                rel: "apple-touch-icon",
+                sizes: "76x76"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                rel: "apple-touch-icon",
+                href: "../images/meta/apple-touch-icon-60x60.png"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                href: "../images/meta/apple-touch-icon-120x120.png",
+                sizes: "60x60",
+                rel: "apple-touch-icon",
+                sizes: "120x120"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                href: "../images/meta/favicon-32x32.png",
+                rel: "icon",
+                sizes: "32x32",
+                type: "image/png"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                href: "../images/meta/favicon-16x16.png",
+                rel: "icon",
+                sizes: "16x16",
+                type: "image/png"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                href: "../images/meta/favicon-48x48.png",
+                rel: "icon",
+                sizes: "48x48",
+                type: "image/png"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                rel: "alternate",
+                type: "application/rss+xml",
+                title: "RSS Feed for nelson.co",
+                href: "/feed.xml"
+            })
+        ]
+    });
+}
+
+
+/***/ }),
+
+/***/ 3386:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BX: () => (/* binding */ ArrowExternal),
+/* harmony export */   SO: () => (/* binding */ LogoInverted)
+/* harmony export */ });
+/* unused harmony exports ArrowRight, ArrowDown, Chevron, Arena */
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+
+const LogoInverted = ()=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
+        width: "32",
+        height: "32",
+        viewBox: "0 0 32 32",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
+            d: "M5.89844 22.1328C5.32812 22.1328 4.99219 21.7812 4.99219 21.1875V11.875C4.99219 11.0781 5.48438 10.5938 6.28906 10.5938C6.98438 10.5938 7.38281 10.8906 7.67969 11.6406L10.7812 19.2344H10.8438L13.9375 11.6406C14.2344 10.8984 14.6406 10.5938 15.3438 10.5938C16.1484 10.5938 16.625 11.0703 16.625 11.875V21.1875C16.625 21.7812 16.2891 22.1328 15.7188 22.1328C15.1484 22.1328 14.8125 21.7812 14.8125 21.1875V14H14.7578L11.7656 21.25C11.5703 21.7188 11.2812 21.9297 10.8125 21.9297C10.3516 21.9297 10.0469 21.7188 9.85938 21.2578L6.86719 14H6.8125V21.1875C6.8125 21.7812 6.46875 22.1328 5.89844 22.1328ZM22.9062 22.1328C22.1562 22.1328 21.7266 21.8125 21.4375 21.0312L18.0703 12.0859C17.9922 11.8906 17.9609 11.7031 17.9609 11.5234C17.9609 10.9688 18.3828 10.5938 19.0078 10.5938C19.5312 10.5938 19.8516 10.8281 20.0156 11.3594L22.9141 19.8359H22.9609L25.8516 11.3438C26.0234 10.8125 26.3125 10.5938 26.8359 10.5938C27.4453 10.5938 27.8672 10.9688 27.8672 11.5C27.8672 11.6797 27.8281 11.8594 27.7578 12.0469L24.3672 21.0391C24.0859 21.8125 23.6562 22.1328 22.9062 22.1328Z",
+            fill: "white"
+        })
+    });
+// export const Logo = () => (
+//   <svg
+//     width="31"
+//     height="29"
+//     viewBox="0 0 62 58"
+//     xmlns="http://www.w3.org/2000/svg"
+//   >
+//     <path
+//       d="M18 34C18 35.1046 17.1011 36.0117 16.0032 35.8905C7.00176 34.8971 0 27.2662 0 18C0 8.73379 7.00176 1.10293 16.0032 0.109504C17.1011 -0.011665 18 0.895431 18 2V34Z"
+//       className="fill-current text-primary dark:text-darkPrimary "
+//     />
+//     <path
+//       d="M16 40C17.1046 40 18 40.8954 18 42V56C18 57.1046 17.1011 58.0117 16.0032 57.8905C7.65739 56.9694 1.03058 50.3426 0.109504 41.9968C-0.011665 40.8989 0.895431 40 2 40L16 40Z"
+//       className="fill-current text-primary dark:text-darkPrimary "
+//     />
+//     <path
+//       d="M44 1.43283C44 0.6415 44.6415 0 45.4328 0V0C54.5826 0 62 7.41737 62 16.5672V32.4328C62 41.5826 54.5826 49 45.4328 49V49C44.6415 49 44 48.3585 44 47.5672V1.43283Z"
+//       className="fill-current text-primary dark:text-darkPrimary"
+//     />
+//     <path
+//       d="M22 1.43283C22 0.6415 22.6415 0 23.4328 0V0C32.5826 0 40 7.41737 40 16.5672V47.5672C40 48.3585 39.3585 49 38.5672 49V49C29.4174 49 22 41.5826 22 32.4328V1.43283Z"
+//       className="fill-current text-primary dark:text-darkPrimary"
+//     />
+//   </svg>
+// )
+const ArrowRight = ()=>/*#__PURE__*/ _jsx("svg", {
+        className: "inline ml-2 ",
+        width: "11",
+        height: "8",
+        viewBox: "0 0 11 8",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: /*#__PURE__*/ _jsx("path", {
+            d: "M1 3.99994H9.5M9.5 3.99994L6.5 0.999939M9.5 3.99994L6.5 7.00006",
+            "stroke-width": "1.5",
+            "stroke-linecap": "round",
+            "stroke-linejoin": "round",
+            className: "stroke-current text-tertiary dark:text-darkTertiary"
+        })
+    });
+const ArrowExternal = ()=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
+        className: "inline ml-1 transform -rotate-45",
+        width: "11",
+        height: "8",
+        viewBox: "0 0 11 8",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
+            d: "M1 3.99994H9.5M9.5 3.99994L6.5 0.999939M9.5 3.99994L6.5 7.00006",
+            "stroke-width": "1.5",
+            "stroke-linecap": "round",
+            "stroke-linejoin": "round",
+            className: "stroke-current text-tertiary dark:text-darkTertiary"
+        })
+    });
+const ArrowDown = ()=>/*#__PURE__*/ _jsx("svg", {
+        className: "inline ml-2",
+        width: "8",
+        height: "10",
+        viewBox: "0 0 8 10",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: /*#__PURE__*/ _jsx("path", {
+            d: "M4.00012 0.75V9.25M4.00012 9.25L7.00012 6.25M4.00012 9.25L1 6.25",
+            stroke: "#7382AB",
+            "stroke-width": "1.5",
+            "stroke-linecap": "round",
+            "stroke-linejoin": "round",
+            className: "fill-current text-tertiary dark:text-darkTertiary"
+        })
+    });
+const Chevron = ()=>/*#__PURE__*/ _jsx("svg", {
+        width: "12",
+        height: "12",
+        viewBox: "0 0 12 12",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: /*#__PURE__*/ _jsx("path", {
+            d: "M3.75 1.5L8.25 6L3.75 10.5002",
+            "stroke-width": "1.5",
+            "stroke-linecap": "round",
+            "stroke-linejoin": "round",
+            className: "stroke-current text-tertiary dark:text-darkTertiary"
+        })
+    });
+const Arena = ()=>/*#__PURE__*/ _jsx("a", {
+        className: "self-center text-tertiary dark:text-darkTertiary opacity-80 group ",
+        href: "https://www.are.na/gavin-nelson/notes-on-taste",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        "aria-label": "are.na",
+        children: /*#__PURE__*/ _jsx("svg", {
+            width: "21",
+            height: "13",
+            viewBox: "0 0 21 13",
+            fill: "none",
+            mlns: "http://www.w3.org/2000/svg",
+            children: /*#__PURE__*/ _jsx("path", {
+                d: "M20.8036 9.00069L17.9781 6.78023C17.8052 6.6447 17.8052 6.42217 17.9781 6.28623L20.8036 4.06617C20.9769 3.93051 21.0492 3.70107 20.9645 3.55659C20.8796 3.4128 20.6427 3.36144 20.4386 3.44302L17.079 4.78108C16.8747 4.8628 16.6822 4.75099 16.6516 4.53293L16.1465 0.945948C16.1156 0.728293 15.9519 0.549805 15.7821 0.549805C15.6129 0.549805 15.4491 0.728293 15.4187 0.946219L14.9132 4.5332C14.8823 4.75126 14.6901 4.86307 14.4856 4.78135L11.1815 3.46525C10.9766 3.38366 10.6428 3.38366 10.4384 3.46525L7.13384 4.78135C6.92947 4.86307 6.73702 4.75126 6.70639 4.5332L6.20129 0.946219C6.17025 0.728293 6.0064 0.549805 5.83713 0.549805C5.66758 0.549805 5.50346 0.728293 5.47297 0.946219L4.96759 4.5332C4.93682 4.75126 4.74451 4.86307 4.54014 4.78135L1.18057 3.44329C0.976335 3.36157 0.739842 3.41307 0.655002 3.55687C0.570298 3.70134 0.642534 3.93078 0.815465 4.06644L3.64106 6.2865C3.81426 6.4223 3.81426 6.64483 3.64106 6.7805L0.81533 9.00069C0.642398 9.13649 0.570163 9.37962 0.654867 9.54076C0.739706 9.70177 0.9762 9.76669 1.18017 9.68483L4.50964 8.34772C4.71415 8.266 4.90457 8.37727 4.93317 8.59547L5.41388 12.2135C5.44288 12.4313 5.63316 12.6096 5.83686 12.6096C6.04001 12.6096 6.23042 12.4314 6.25956 12.2135L6.74068 8.59547C6.76928 8.37727 6.96037 8.266 7.16379 8.34772L10.4387 9.66206C10.6426 9.74419 10.9764 9.74419 11.1808 9.66206L14.4551 8.34772C14.6589 8.266 14.8495 8.37727 14.8786 8.59547L15.3598 12.2135C15.3885 12.4313 15.5789 12.6096 15.7819 12.6096C15.9855 12.6096 16.1759 12.4314 16.2049 12.2135L16.6857 8.59547C16.7152 8.37727 16.9053 8.266 17.1093 8.34772L20.4389 9.68483C20.6424 9.76669 20.8793 9.70177 20.9642 9.54076C21.0492 9.37962 20.9769 9.13649 20.8036 9.00069ZM13.6149 6.80855L11.1266 8.72408C10.9524 8.85825 10.6667 8.85825 10.4931 8.72408L8.00447 6.80855C7.83031 6.67411 7.82896 6.4532 8.00175 6.31713L10.4953 4.35295C10.668 4.21674 10.9511 4.21674 11.1239 4.35295L13.6176 6.31713C13.7906 6.4532 13.7893 6.67411 13.6149 6.80855Z",
+                className: "transition duration-300 ease-in-out fill-current text-tertiary dark:text-darkTertiary group-hover:text-primary group-hover:dark:text-darkPrimary"
+            })
+        })
+    });
+
+
+/***/ })
+
+};
+;
+//# sourceMappingURL=869.js.map
