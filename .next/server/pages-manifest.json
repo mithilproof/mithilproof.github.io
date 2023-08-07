@@ -1,14 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/404": "pages/404.html",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/colophon": "pages/colophon.html",
-  "/api/sentry-example-api": "pages/api/sentry-example-api.js",
-  "/sentry-example-page": "pages/sentry-example-page.html",
-  "/musicthread/2021-favorites": "pages/musicthread/2021-favorites.js",
-  "/": "pages/index.js",
-  "/musicthread/2022-favorites": "pages/musicthread/2022-favorites.js",
-  "/musicthread/heavy-rotation": "pages/musicthread/heavy-rotation.js",
-  "/posts/[slug]": "pages/posts/[slug].js"
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.js",
+  "/posts/[slug]": "pages/posts/[slug].js",
+  "/": "pages/index.js"
 }

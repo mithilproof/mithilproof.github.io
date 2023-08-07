@@ -22,7 +22,7 @@ const IndexPage = ({ posts }) => {
         <div className="grid max-w-full gap-16 auto-rows-auto">
           <div>
             <p className="mt-8 md:mt-4">
-              I'm the founder and CEO of {" "}
+              I'm the founder of {" "}
               <a
                 className="text-tertiary dark:text-darkTertiary"
                 href="https://oleic.co"
@@ -31,7 +31,7 @@ const IndexPage = ({ posts }) => {
               >
                 Oleic
               </a>
-              .
+              -- we're helping people create better games. I make things that look nice, work well, and sometimes make sense. If you want to follow along as I build stuff, drop me an email. Anyways, stay true to yourself, keep exploring, keep shipping.
             </p>
           </div>
           <Section title="Contact">
@@ -46,11 +46,11 @@ const IndexPage = ({ posts }) => {
               </a>
               <a
                 className="sm:mr-8 text-tertiary dark:text-darkTertiary"
-                href="https://twitter.com/mithilproof"
+                href="https://x.com/mithilproof"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                X
               </a>
               <a
                 className="sm:mr-8 text-tertiary dark:text-darkTertiary"
@@ -60,15 +60,6 @@ const IndexPage = ({ posts }) => {
               >
                 GitHub
               </a>
-              <a
-                className="sm:mr-8 text-tertiary dark:text-darkTertiary"
-                href="https://dribbble.com/mithilproof/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Dribbble
-              </a>
-
             </div>
           </Section>
           {/* <Section title="Notes" className="flex flex-row">
