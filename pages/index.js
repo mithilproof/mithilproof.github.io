@@ -34,6 +34,138 @@ const IndexPage = ({ posts }) => {
               -- we're helping people create better games. I make things that look nice, work well, and sometimes make sense. If you want to follow along as I build stuff, drop me an email. Anyways, stay true to yourself, keep exploring, keep shipping.
             </p>
           </div>
+          {/* <Section title="Notes" className="flex flex-row">
+            <Link
+            href="/notes"
+            className=" text-tertiary dark:text-darkTertiary group"
+            target="_blank"
+            rel="noopener noreferrer"
+            legacyBehavior
+            >
+            Explore
+            </Link>
+            <ArrowExternal />
+          </Section> */}
+          {/* <Section title="Work">
+            <div className="mb-2">
+            <Feature
+            title={"Merge queues for GitHub Mobile"}
+            date={"Coming soon"}
+            href={
+              "https://github.blog/changelog/2023-02-08-pull-request-merge-queue-public-beta/"
+            }
+              />
+              </div>
+              <div className="mb-2">
+              <Feature
+              title={"Mobile code editing and pull requests"}
+              date={"March 2023"}
+              href={
+                "https://github.blog/2023-03-07-file-editing-on-github-mobile-keeps-leveling-up/"
+              }
+              />
+              </div>
+              <div className="mb-2">
+              <Feature
+              title={"Achievements on GitHub Mobile"}
+              date={"Jan 2023"}
+              href={
+                "https://github.blog/changelog/2023-01-10-achievements-on-github-mobile/"
+              }
+              />
+              </div>
+              <div className="mb-2">
+              <Feature
+              title={"GitHub Activity Feed"}
+              date={"June 2022"}
+              href={
+                "https://github.blog/changelog/2022-06-21-browse-the-activity-feed-on-github-mobile/"
+              }
+              />
+              </div>
+              <div className="mb-2">
+              <Feature
+              title={"Shortcuts"}
+              date={"Jan 2022"}
+              href={"https://twitter.com/github/status/1481732836751204354"}
+              />
+              </div>
+            </Section> */}
+          {/* <Section title="Features">
+            <div className="mb-2">
+            <Feature
+            title={"Interview with Gavin Nelson, product and icon designer"}
+            date={"March 2023"}
+            href={
+              "https://manual.withcompound.com/chapters/interview-with-gavin-nelson-product-and-icon-designer"
+            }
+            />
+            </div>
+            <div className="mb-2">
+            <Feature
+            title={
+              "Made with Sketch: How Gavin Nelson puts the icon in iconic"
+            }
+            date={"May 2022"}
+            href={"https://www.sketch.com/blog/gavin-nelson-icon-design/"}
+            />
+            </div>
+            <div className="mb-2">
+            <Feature
+            title={"Workspaces #136"}
+            date={"March 2022"}
+            href={"https://www.workspaces.xyz/p/136-gavin-nelson"}
+            />
+            </div>
+          </Section> */}
+          <Section title="Writing">
+            {orderedPosts.map((post, key) => {
+              return (
+                <div className="mb-2">
+                  <Post
+                    key={key}
+                    title={post.data.title}
+                    date={post.data.date}
+                    href={`${post.filePath.replace(/\.mdx?$/, "")}`}
+                  />
+                </div>
+              )
+            })}
+          </Section>
+          <Section title="Projects">
+            {/* <div className="mb-4">
+              <Project
+                link="/highlights"
+                title="Highlights"
+                description="A feed of passages I’ve highlighted from articles across the web"
+              />
+            </div>
+            <div className="mb-4">
+              <MultiProject
+                link1="/musicthread/heavy-rotation"
+                link2="/musicthread/2022-favorites"
+                link3="/musicthread/2021-favorites"
+                title1="Heavy Rotation"
+                title2="2022 Favorites"
+                title3="2021 Favorites"
+                description="A collection of what I've been listening to recently"
+              />
+            </div> */}
+            <div className="mb-4">
+              <ExternalProject
+                link="https://twitter.com/mithilproof/status/1689610211554926592?s=20"
+                title="Heeder"
+                description="Conduct better user interviews."
+              />
+            </div>
+            <div className="mb-4">
+              <ExternalProject
+                link=""
+                title="Christopher"
+                description="Learn to draw with Sketch-RNN."
+              />
+            </div>
+          </Section>
           <Section title="Contact">
             <div className="flex flex-row self-stretch justify-between sm:justify-start ">
               <a
@@ -62,130 +194,6 @@ const IndexPage = ({ posts }) => {
               </a>
             </div>
           </Section>
-          {/* <Section title="Notes" className="flex flex-row">
-            <Link
-              href="/notes"
-              className=" text-tertiary dark:text-darkTertiary group"
-              target="_blank"
-              rel="noopener noreferrer"
-              legacyBehavior
-            >
-              Explore
-            </Link>
-            <ArrowExternal />
-          </Section> */}
-          {/* <Section title="Work">
-            <div className="mb-2">
-              <Feature
-                title={"Merge queues for GitHub Mobile"}
-                date={"Coming soon"}
-                href={
-                  "https://github.blog/changelog/2023-02-08-pull-request-merge-queue-public-beta/"
-                }
-              />
-            </div>
-            <div className="mb-2">
-              <Feature
-                title={"Mobile code editing and pull requests"}
-                date={"March 2023"}
-                href={
-                  "https://github.blog/2023-03-07-file-editing-on-github-mobile-keeps-leveling-up/"
-                }
-              />
-            </div>
-            <div className="mb-2">
-              <Feature
-                title={"Achievements on GitHub Mobile"}
-                date={"Jan 2023"}
-                href={
-                  "https://github.blog/changelog/2023-01-10-achievements-on-github-mobile/"
-                }
-              />
-            </div>
-            <div className="mb-2">
-              <Feature
-                title={"GitHub Activity Feed"}
-                date={"June 2022"}
-                href={
-                  "https://github.blog/changelog/2022-06-21-browse-the-activity-feed-on-github-mobile/"
-                }
-              />
-            </div>
-            <div className="mb-2">
-              <Feature
-                title={"Shortcuts"}
-                date={"Jan 2022"}
-                href={"https://twitter.com/github/status/1481732836751204354"}
-              />
-            </div>
-          </Section> */}
-          {/* <Section title="Features">
-            <div className="mb-2">
-              <Feature
-                title={"Interview with Gavin Nelson, product and icon designer"}
-                date={"March 2023"}
-                href={
-                  "https://manual.withcompound.com/chapters/interview-with-gavin-nelson-product-and-icon-designer"
-                }
-              />
-            </div>
-            <div className="mb-2">
-              <Feature
-                title={
-                  "Made with Sketch: How Gavin Nelson puts the icon in iconic"
-                }
-                date={"May 2022"}
-                href={"https://www.sketch.com/blog/gavin-nelson-icon-design/"}
-              />
-            </div>
-            <div className="mb-2">
-              <Feature
-                title={"Workspaces #136"}
-                date={"March 2022"}
-                href={"https://www.workspaces.xyz/p/136-gavin-nelson"}
-              />
-            </div>
-          </Section> */}
-          <Section title="Writing">
-            {orderedPosts.map((post, key) => {
-              return (
-                <div className="mb-2">
-                  <Post
-                    key={key}
-                    title={post.data.title}
-                    date={post.data.date}
-                    href={`${post.filePath.replace(/\.mdx?$/, "")}`}
-                  />
-                </div>
-              )
-            })}
-          </Section>
-
-          {/* <Section title="Projects">
-            <div className="mb-4">
-              <Project
-                link="/highlights"
-                title="Highlights"
-                description="A feed of passages I’ve highlighted from articles across the web"
-              />
-            </div>
-            <div className="mb-4">
-              <MultiProject
-                link1="/musicthread/heavy-rotation"
-                link2="/musicthread/2022-favorites"
-                link3="/musicthread/2021-favorites"
-                title1="Heavy Rotation"
-                title2="2022 Favorites"
-                title3="2021 Favorites"
-                description="A collection of what I've been listening to recently"
-              />
-            </div>
-            <ExternalProject
-              link="https://gumroad.com/l/dvctd"
-              title="Monterey"
-              description="A macOS and iOS icon theme"
-            />
-          </Section> */}
           
         </div>
       </Layout>
