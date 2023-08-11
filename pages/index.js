@@ -155,7 +155,7 @@ const IndexPage = ({ posts }) => {
               <ExternalProject
                 link="https://twitter.com/mithilproof/status/1689610211554926592?s=20"
                 title="Heeder"
-                description="Conduct better user interviews."
+                description="Conduct better user interviews. WIP."
               />
             </div>
             <div className="mb-4">
