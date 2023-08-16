@@ -160,9 +160,9 @@ const IndexPage = ({ posts }) => {
             </div>
             <div className="mb-4">
               <ExternalProject
-                link=""
+                link="https://github.com/mithilproof/Christopher"
                 title="Christopher"
-                description="Learn to draw with Sketch-RNN."
+                description="Learn to draw with Sketch-RNN. Created with TF."
               />
             </div>
           </Section>
