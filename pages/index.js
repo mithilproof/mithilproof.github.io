@@ -155,14 +155,14 @@ const IndexPage = ({ posts }) => {
               <ExternalProject
                 link="https://twitter.com/mithilproof/status/1689610211554926592?s=20"
                 title="Heeder"
-                description="Conduct better user interviews."
+                description="Conduct better user interviews. WIP."
               />
             </div>
             <div className="mb-4">
               <ExternalProject
-                link=""
+                link="https://github.com/mithilproof/Christopher"
                 title="Christopher"
-                description="Learn to draw with Sketch-RNN."
+                description="Learn to draw with Sketch-RNN. Created with TF."
               />
             </div>
           </Section>
