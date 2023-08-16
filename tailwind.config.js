@@ -12,7 +12,7 @@ module.exports = {
         darkBackground: "#23201F",
         code: "hsl(0, 0%, 93%)",
         darkCode: "hsl(224, 25%, 8%)",
-        selection: "#FFAB7F",
+        selection: "#2cffd1cb",
       },
       textColor: {
         primary: "hsl(0, 0%, 5%)",

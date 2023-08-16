@@ -14,9 +14,7 @@ const Colophon = () => (
       <h1 className="mb-4">Colophon</h1>
 
       <p className="mb-4">
-        Set in Söhne with a particular focus on typography that feels good. Built with Next.js with JavaScript disabled; you don't need to read 
-        documents, and their is no interactivity. Deployed with Vercel.
-        The source code of this is availible on{" "}
+      This website is designed and developed by Mithil Verma. The source code of this is availible on{" "}
         <a
           href="https://github.com/mithilproof"
           target="_black"
